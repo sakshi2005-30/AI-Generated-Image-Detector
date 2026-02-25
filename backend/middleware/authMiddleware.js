@@ -3,7 +3,7 @@ const protect=async(req,res,next)=>{
     const token=req.cookies.accessToken;
     if(!token){
         return res.status(404).json({
-            message:"No refresh token"
+            message:"No access token"
         })
     }
     try{
